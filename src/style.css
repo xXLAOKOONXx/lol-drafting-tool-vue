@@ -54,6 +54,9 @@ body {
 .hidden {
     display: none;
 }
+#bar .big-text .hidden {
+    display: none;
+}
 
 #overlay > img {
     width: 1920px;
@@ -92,6 +95,10 @@ body {
     background: var(--light-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+#bar input {
+    background: none;
 }
 
 #bar .timer {

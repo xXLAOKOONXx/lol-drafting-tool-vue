@@ -2,7 +2,10 @@
   <div id="bar">
     <div class="blue colorbar"></div>
     <div class="blue text flex-vcenter">
-      <span class="big-text" id="blue_name">{{team1name}}</span>
+      <span class="big-text" id="blue_name">
+        <input v-if="team1editing" type="text" class="big-text" @change="team1nameedit($event)" v-model="team1namedata"/>
+        <span v-if="!team1editing" @click="team1editing = true">{{team1namedata}}</span>
+      </span>
     </div>
     <div class="blue timer flex-vcenter">
       <span class="big-text" id="blue_timer">:--</span>
@@ -19,7 +22,10 @@
       <span class="big-text" id="red_timer">:--</span>
     </div>
     <div class="red text flex-vcenter">
-      <span class="big-text" id="red_name">{{team2name}}</span>
+      <span class="big-text" id="red_name">
+        <input v-if="team2editing" type="text" class="big-text" @change="team2nameedit($event)" v-model="team2namedata"/>
+        <span v-if="!team2editing" @click="team2editing = true">{{team2namedata}}</span>
+      </span>
     </div>
     <div class="red colorbar"></div>
   </div>
@@ -27,6 +33,14 @@
 
 <script>
 export default {
+  data: function () {
+    return {
+      team1namedata: this.team1name,
+      team2namedata: this.team2name,
+      team1editing: false,
+      team2editing: false
+    }
+  },
   props: {
     team1name: {
       type: String,
@@ -43,6 +57,14 @@ export default {
           text: ''
         }
       }
+    }
+  },
+  methods: {
+    team1nameedit: function (event) {
+      this.team1editing = !this.team1editing
+    },
+    team2nameedit: function (event) {
+      this.team2editing = !this.team2editing
     }
   }
 }
