@@ -34,7 +34,6 @@ export default {
   computed: {
   },
   mounted () {
-    console.log('Got Mounted')
     this.initchampionlist()
   },
   methods: {

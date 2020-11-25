@@ -3,6 +3,9 @@
     <div class="splash">
       <img :src="champion.loadingurl" :id="'bans_' + team + '_splash_' + banid"/>
     </div>
+    <div class="textwrapper" :id="'bans_' + team + '_textwrapper_' + banid">
+      <div class="text" :id="'bans_' + team + '_text_' + banid">{{ champion.name }}</div>
+    </div>
   </div>
 </template>
 

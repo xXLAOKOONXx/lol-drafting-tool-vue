@@ -30,6 +30,7 @@ body {
     --pick-background-color: var(--light-color);
     --pick-text-background-color: var(--dark-color);
     --ban-background-color: var(--light-color);
+    --ban-text-background-color: var(--dark-color);
 
     
     /*--body-background-color: var(--clean-color);*/
@@ -255,6 +256,7 @@ body {
     overflow: hidden;
     transform: rotate(-15deg);
     height: 200px;
+    width: 110px;
     margin-top: -25px;
     background-color: var(--ban-background-color);
 }
@@ -274,8 +276,32 @@ body {
     margin-top: 0px;
     margin-left: -75px;
 }
+.bans .ban .textwrapper .text {
+    background: var(--light-color);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.bans .ban .textwrapper {
+    background-color: var(--ban-text-background-color);
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 25px;
+    margin-top: -65px;
+    width: 110px;
+    margin-left: -20px;
+}
+.bans.red .ban .textwrapper {
+    transform: rotate(-15deg);
+    margin-top: -70px;
+}
+.bans.blue .ban .textwrapper {
+    transform: rotate(15deg);
+}
+
 .bans.red .ban .splash img {
     margin-top: 0px;
+    margin: -25px;
     /*margin-left: -182px;*/
 }
 
