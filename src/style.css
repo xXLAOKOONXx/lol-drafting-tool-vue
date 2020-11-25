@@ -338,20 +338,54 @@ body {
     transform: rotate(-15deg);
 }
 
-#championsearchwrapper {
+#mid {
     position: absolute;
     top: 183px;
     width: 1020px;
     height: 690px;
     left: 450px;
+}
 
+#championsearchwrapper {
+    height: 650px;
     overflow-y: scroll;
-
-    background-color: var(--debug-color-green);
 }
 
 #championsearchwrapper .champion {
     float: left;
     height: 120px;
     
+}
+
+#mid span {
+    background-color: var(--dark-color);
+    display: block;
+    height: 40px;
+
+}
+
+#mid span span {    
+    background: var(--light-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#mid span input {
+    background: none;
+    font-size: 30px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#mid button {
+    position: absolute;
+    right: 0px;
+    height: 40px;
+    width: 60px;
+    background: none;
+    border: none;
+}
+
+#mid button:hover {
+    background: var(--light-color);
 }
