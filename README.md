@@ -1,5 +1,13 @@
 # drafting-tool
 
+## Promise
+
+Simple WebUI to create a costum League-of-Legends drafting and share it with a parameterized URL.
+
+## Support
+
+This project is no longer actively maintained, but the code is stable enough to work after these couple of years.
+
 ## Project setup
 ```
 npm install
